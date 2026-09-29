@@ -173,7 +173,7 @@
   "item": [
     {
       "name": "ACH",
-      "description": "Run this folder independently to execute the complete sandbox ACH funding and payout lifecycle with a fresh Mock-US operating account. Cleanup runs by default and can be disabled with cleanupAccount=false.",
+      "description": "Run this folder independently to execute the complete sandbox ACH funding and payout lifecycle with a fresh USD operating account. Cleanup runs by default and can be disabled with cleanupAccount=false.",
       "event": [],
       "item": [
         {
@@ -355,8 +355,8 @@
           "response": []
         },
         {
-          "name": "ACH 02 - Create Mock-US operating account",
-          "description": "Creates a fresh isolated Mock-US USD operating account for this run.",
+          "name": "ACH 02 - Create USD operating account",
+          "description": "Creates a fresh isolated USD operating account for this run.",
           "event": [
             {
               "listen": "test",
@@ -393,7 +393,7 @@
                   "",
                   "const response = pm.response.json()",
                   "",
-                  "pm.test('Mock-US operating account was created', () => {",
+                  "pm.test('USD operating account was created', () => {",
                   "  pm.expect(response.type).to.eql('account_simulation')",
                   "  pm.expect(response.account_id).to.be.a('string')",
                   "  pm.expect(response.account_id.length).to.be.above(0)",
@@ -403,9 +403,9 @@
             }
           ],
           "request": {
-            "name": "ACH 02 - Create Mock-US operating account",
+            "name": "ACH 02 - Create USD operating account",
             "description": {
-              "content": "Creates a fresh isolated Mock-US USD operating account for this run.",
+              "content": "Creates a fresh isolated USD operating account for this run.",
               "type": "text/plain"
             },
             "url": {
@@ -2281,7 +2281,7 @@
         },
         {
           "name": "ACH 19 - Close generated account",
-          "description": "Closes the drained Mock-US operating account.",
+          "description": "Closes the drained USD operating account.",
           "event": [
             {
               "listen": "prerequest",
@@ -2336,7 +2336,7 @@
           "request": {
             "name": "ACH 19 - Close generated account",
             "description": {
-              "content": "Closes the drained Mock-US operating account.",
+              "content": "Closes the drained USD operating account.",
               "type": "text/plain"
             },
             "url": {
@@ -2386,7 +2386,7 @@
     },
     {
       "name": "Fedwire",
-      "description": "Run this folder independently to execute the complete sandbox Fedwire funding and payout lifecycle with a fresh Mock-US operating account. Cleanup runs by default and can be disabled with cleanupAccount=false.",
+      "description": "Run this folder independently to execute the complete sandbox Fedwire funding and payout lifecycle with a fresh USD operating account. Cleanup runs by default and can be disabled with cleanupAccount=false.",
       "event": [],
       "item": [
         {
@@ -2568,8 +2568,8 @@
           "response": []
         },
         {
-          "name": "Fedwire 02 - Create Mock-US operating account",
-          "description": "Creates a fresh isolated Mock-US USD operating account for this run.",
+          "name": "Fedwire 02 - Create USD operating account",
+          "description": "Creates a fresh isolated USD operating account for this run.",
           "event": [
             {
               "listen": "test",
@@ -2606,7 +2606,7 @@
                   "",
                   "const response = pm.response.json()",
                   "",
-                  "pm.test('Mock-US operating account was created', () => {",
+                  "pm.test('USD operating account was created', () => {",
                   "  pm.expect(response.type).to.eql('account_simulation')",
                   "  pm.expect(response.account_id).to.be.a('string')",
                   "  pm.expect(response.account_id.length).to.be.above(0)",
@@ -2616,9 +2616,9 @@
             }
           ],
           "request": {
-            "name": "Fedwire 02 - Create Mock-US operating account",
+            "name": "Fedwire 02 - Create USD operating account",
             "description": {
-              "content": "Creates a fresh isolated Mock-US USD operating account for this run.",
+              "content": "Creates a fresh isolated USD operating account for this run.",
               "type": "text/plain"
             },
             "url": {
@@ -4494,7 +4494,7 @@
         },
         {
           "name": "Fedwire 19 - Close generated account",
-          "description": "Closes the drained Mock-US operating account.",
+          "description": "Closes the drained USD operating account.",
           "event": [
             {
               "listen": "prerequest",
@@ -4549,7 +4549,7 @@
           "request": {
             "name": "Fedwire 19 - Close generated account",
             "description": {
-              "content": "Closes the drained Mock-US operating account.",
+              "content": "Closes the drained USD operating account.",
               "type": "text/plain"
             },
             "url": {
@@ -4599,7 +4599,7 @@
     },
     {
       "name": "SWIFT",
-      "description": "Run this folder independently to execute the complete sandbox SWIFT funding and payout lifecycle with a fresh Mock-US operating account. Cleanup runs by default and can be disabled with cleanupAccount=false.",
+      "description": "Run this folder independently to execute the complete sandbox SWIFT funding and payout lifecycle with a fresh USD operating account. Cleanup runs by default and can be disabled with cleanupAccount=false.",
       "event": [],
       "item": [
         {
@@ -4781,8 +4781,8 @@
           "response": []
         },
         {
-          "name": "SWIFT 02 - Create Mock-US operating account",
-          "description": "Creates a fresh isolated Mock-US USD operating account for this run.",
+          "name": "SWIFT 02 - Create USD operating account",
+          "description": "Creates a fresh isolated USD operating account for this run.",
           "event": [
             {
               "listen": "test",
@@ -4819,7 +4819,7 @@
                   "",
                   "const response = pm.response.json()",
                   "",
-                  "pm.test('Mock-US operating account was created', () => {",
+                  "pm.test('USD operating account was created', () => {",
                   "  pm.expect(response.type).to.eql('account_simulation')",
                   "  pm.expect(response.account_id).to.be.a('string')",
                   "  pm.expect(response.account_id.length).to.be.above(0)",
@@ -4829,9 +4829,9 @@
             }
           ],
           "request": {
-            "name": "SWIFT 02 - Create Mock-US operating account",
+            "name": "SWIFT 02 - Create USD operating account",
             "description": {
-              "content": "Creates a fresh isolated Mock-US USD operating account for this run.",
+              "content": "Creates a fresh isolated USD operating account for this run.",
               "type": "text/plain"
             },
             "url": {
@@ -6707,7 +6707,7 @@
         },
         {
           "name": "SWIFT 19 - Close generated account",
-          "description": "Closes the drained Mock-US operating account.",
+          "description": "Closes the drained USD operating account.",
           "event": [
             {
               "listen": "prerequest",
@@ -6762,7 +6762,7 @@
           "request": {
             "name": "SWIFT 19 - Close generated account",
             "description": {
-              "content": "Closes the drained Mock-US operating account.",
+              "content": "Closes the drained USD operating account.",
               "type": "text/plain"
             },
             "url": {

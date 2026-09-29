@@ -25,7 +25,7 @@ Use a sandbox API key. Every request accepts only `https://api.sandbox.augustus.
 3. Select **Run folder**.
 4. Keep the requests in their generated order and start the run.
 
-Run rail folders independently. Each rail flow creates a fresh Mock-US USD operating account, simulates a USD 100.00 deposit, sends a USD 21.21 payout, and validates balances and events. With cleanup enabled, it then freezes the account, drains and settles the residual balance, verifies a zero balance, and closes the account. Polling can make a run take several minutes.
+Run rail folders independently. Each rail flow creates a fresh USD operating account, simulates a USD 100.00 deposit, sends a USD 21.21 payout, and validates balances and events. With cleanup enabled, it then freezes the account, drains and settles the residual balance, verifies a zero balance, and closes the account. Polling can make a run take several minutes.
 
 The Webhook folder is skipped when `webhookUrl` is empty. When configured, it creates a subscription, sends a `ping.test` event, and validates successful delivery. The receiver must return a 2xx status.
 
