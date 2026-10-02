@@ -31,4 +31,6 @@ The Webhook folder is skipped when `webhookUrl` is empty. When configured, it cr
 
 Required rail scopes are `simulations:write`, `accounts:read`, `counterparties:write`, `payouts:read`, `payouts:write`, `deposits:read`, and `events:read`. The Webhook folder also requires `webhook_subscriptions:write` and `webhook_deliveries:read`. The `full_access` alias is sufficient.
 
+Rail flows require the sandbox merchant behind the API key to have completed onboarding. Otherwise the account creation step returns HTTP 400 with a "no completed onboarding application" error, and the run stops there.
+
 Cleanup is best-effort. A failure before the cleanup steps can leave a generated account open. Closed accounts and created counterparties remain in sandbox history.

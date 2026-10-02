@@ -392,12 +392,21 @@
                   "})",
                   "",
                   "const response = pm.response.json()",
+                  "const created =",
+                  "  pm.response.code === 200 &&",
+                  "  response.type === 'account_simulation' &&",
+                  "  typeof response.account_id === 'string' &&",
+                  "  response.account_id.length > 0",
                   "",
                   "pm.test('USD operating account was created', () => {",
                   "  pm.expect(response.type).to.eql('account_simulation')",
                   "  pm.expect(response.account_id).to.be.a('string')",
                   "  pm.expect(response.account_id.length).to.be.above(0)",
-                  "})"
+                  "})",
+                  "",
+                  "if (!created) {",
+                  "  pm.execution.setNextRequest(null)",
+                  "}"
                 ]
               }
             }
@@ -1057,6 +1066,12 @@
                   "})",
                   "",
                   "const response = pm.response.json()",
+                  "const created =",
+                  "  pm.response.code === 200 &&",
+                  "  response.type === 'payout' &&",
+                  "  response.status === 'initiated' &&",
+                  "  typeof response.id === 'string' &&",
+                  "  response.id.length > 0",
                   "",
                   "pm.test('Payout was initiated', () => {",
                   "  pm.expect(response.type).to.eql('payout')",
@@ -1067,7 +1082,11 @@
                   "  pm.expect(response.currency).to.eql('USD')",
                   "  pm.expect(response.rail).to.eql(pm.collectionVariables.get('rail'))",
                   "  pm.expect(response.failure).to.eql(null)",
-                  "})"
+                  "})",
+                  "",
+                  "if (!created) {",
+                  "  pm.execution.setNextRequest(null)",
+                  "}"
                 ]
               }
             }
@@ -2605,12 +2624,21 @@
                   "})",
                   "",
                   "const response = pm.response.json()",
+                  "const created =",
+                  "  pm.response.code === 200 &&",
+                  "  response.type === 'account_simulation' &&",
+                  "  typeof response.account_id === 'string' &&",
+                  "  response.account_id.length > 0",
                   "",
                   "pm.test('USD operating account was created', () => {",
                   "  pm.expect(response.type).to.eql('account_simulation')",
                   "  pm.expect(response.account_id).to.be.a('string')",
                   "  pm.expect(response.account_id.length).to.be.above(0)",
-                  "})"
+                  "})",
+                  "",
+                  "if (!created) {",
+                  "  pm.execution.setNextRequest(null)",
+                  "}"
                 ]
               }
             }
@@ -3270,6 +3298,12 @@
                   "})",
                   "",
                   "const response = pm.response.json()",
+                  "const created =",
+                  "  pm.response.code === 200 &&",
+                  "  response.type === 'payout' &&",
+                  "  response.status === 'initiated' &&",
+                  "  typeof response.id === 'string' &&",
+                  "  response.id.length > 0",
                   "",
                   "pm.test('Payout was initiated', () => {",
                   "  pm.expect(response.type).to.eql('payout')",
@@ -3280,7 +3314,11 @@
                   "  pm.expect(response.currency).to.eql('USD')",
                   "  pm.expect(response.rail).to.eql(pm.collectionVariables.get('rail'))",
                   "  pm.expect(response.failure).to.eql(null)",
-                  "})"
+                  "})",
+                  "",
+                  "if (!created) {",
+                  "  pm.execution.setNextRequest(null)",
+                  "}"
                 ]
               }
             }
@@ -4818,12 +4856,21 @@
                   "})",
                   "",
                   "const response = pm.response.json()",
+                  "const created =",
+                  "  pm.response.code === 200 &&",
+                  "  response.type === 'account_simulation' &&",
+                  "  typeof response.account_id === 'string' &&",
+                  "  response.account_id.length > 0",
                   "",
                   "pm.test('USD operating account was created', () => {",
                   "  pm.expect(response.type).to.eql('account_simulation')",
                   "  pm.expect(response.account_id).to.be.a('string')",
                   "  pm.expect(response.account_id.length).to.be.above(0)",
-                  "})"
+                  "})",
+                  "",
+                  "if (!created) {",
+                  "  pm.execution.setNextRequest(null)",
+                  "}"
                 ]
               }
             }
@@ -5483,6 +5530,12 @@
                   "})",
                   "",
                   "const response = pm.response.json()",
+                  "const created =",
+                  "  pm.response.code === 200 &&",
+                  "  response.type === 'payout' &&",
+                  "  response.status === 'initiated' &&",
+                  "  typeof response.id === 'string' &&",
+                  "  response.id.length > 0",
                   "",
                   "pm.test('Payout was initiated', () => {",
                   "  pm.expect(response.type).to.eql('payout')",
@@ -5493,7 +5546,11 @@
                   "  pm.expect(response.currency).to.eql('USD')",
                   "  pm.expect(response.rail).to.eql(pm.collectionVariables.get('rail'))",
                   "  pm.expect(response.failure).to.eql(null)",
-                  "})"
+                  "})",
+                  "",
+                  "if (!created) {",
+                  "  pm.execution.setNextRequest(null)",
+                  "}"
                 ]
               }
             }
